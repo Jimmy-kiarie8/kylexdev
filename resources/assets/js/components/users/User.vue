@@ -15,16 +15,16 @@
             <v-form ref="form" @submit.prevent="update">
               <v-container grid-list-xl fluid>
                 <v-layout wrap>
-                    <v-flex xs12>
-                      <v-text-field
-                      v-model="feedback.comment"
-                      color="blue"
-                      multi-line
+                  <v-flex xs12>
+                      <v-textarea
+                        v-model="feedback.comment"
+                        color="blue"
                       >
-                      <div slot="label">
-                        Comment <small>(optional)</small>
-                      </div>
-                    </v-text-field>
+                        <div slot="label">
+                          Comment <small>(optional)</small>
+                        </div>
+                      </v-textarea>
+                   </v-flex>
 
                     <v-card-actions>
                       <v-spacer></v-spacer>

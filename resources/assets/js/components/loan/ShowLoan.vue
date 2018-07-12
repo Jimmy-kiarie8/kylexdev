@@ -1,54 +1,93 @@
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="openRequest" persistent max-width="700px">
-      <v-card v-if="openRequest">
-        <v-card-title fixed>
-          <span class="headline">{{client.name}}' Details</span>
-        </v-card-title>
-        <v-card-text>
-          <v-container grid-list-md>
-            <div class="col-md-12 col-sm-12">
-            <ul class="list-group">
-              <li class="list-group-item row active">
-                <label class="col-md-5 col-lg-5"><b>Member Bio Data</b></label>
-              </li>
+    <v-dialog v-model="openRequest" persistent max-width="1300px">
+           <v-card>
+             <v-card-title fixed> 
+               <span class="headline">Add Loan</span>
+             </v-card-title>
+             <v-card-text>
+               <v-container grid-list-md>
+                 <v-layout wrap>
+                  <v-card flat>
+                    <v-card-text>
 
-              <li class="list-group-item row">
-                <label class="col-md-5 col-lg-5"><b>Name</b></label> {{ client.name }}
-              </li>
-              <li class="list-group-item row">
-                <label class="col-md-5 col-lg-5"><b>Id Number</b></label> {{ client.id_no }}
-              </li>
+                     <!-- Tabs -->
+                     <div>
+                       <v-toolbar color="indigo" dark tabs>
+                         <v-tabs
+                         v-model="tab"
+                         color="indigo"
+                         align-with-title
+                         >
+                         <v-tabs-slider color="yellow"></v-tabs-slider>
 
+                         <v-tab v-for="item in items" :key="item">
+                           {{ item }}
+                         </v-tab>
+                       </v-tabs>
+                     </v-toolbar>
 
-              <li class="list-group-item row active">
-                <label class="col-md-5 col-lg-5"><b>Member Address</b></label>
-              </li>
-              <li class="list-group-item row">
-                <label class="col-md-5 col-lg-5"><b>Email</b></label> {{ client.email }}
-              </li>
-              <li class="list-group-item row">
-                <label class="col-md-5 col-lg-5"><b>Phone Number</b></label> {{ client.phone }}
-              </li>
-              <li class="list-group-item row">
-                <label class="col-md-5 col-lg-5"><b>Address</b></label> {{ client.address }}
-              </li>
-            </ul>
-          </div>
-          </v-container>
-        </v-card-text>
-        <v-btn flat @click="close">Close</v-btn>
-      </v-card>
+                     <!-- Active Loans -->
+                     <v-tabs-items v-model="tab">
+                       <v-tab-item>
+                         <v-card flat>
+                          <ActiveLoan></ActiveLoan>
+                         </v-card>
+                       </v-tab-item>
+                     <!-- Active Loans End -->
+
+                     <!-- Applied Loans -->
+                       <v-tab-item>
+                         <v-card flat>
+
+                         </v-card>
+                       </v-tab-item>
+                     <!-- Applied Loans End -->
+
+                     <!-- Rejected Loans -->
+                       <v-tab-item>
+                         <v-card flat>
+
+                         </v-card>
+                       </v-tab-item>
+                     <!-- Rejected Loans End -->
+
+                     <!-- Applied Loans -->
+                       <v-tab-item>
+                         <v-card flat>
+
+                         </v-card>
+                       </v-tab-item>
+                     </v-tabs-items>
+                     <!-- Applied Loans End -->
+                   </div>
+                   <!-- Tabs -->
+                 </v-card-text>
+               </v-card>
+             </v-layout>
+           </v-container>
+         </v-card-text>
+       </v-card>
     </v-dialog>
   </v-layout>
 </template>
 
 <script>
+let ActiveLoan = require('./ActiveLoans')
+// let ActiveLoan = require('./ActiveLoan')
+// let ActiveLoan = require('./ActiveLoan')
 export default {
   props: ['openRequest', 'client'],
+  components: {
+    ActiveLoan
+  },
   data() {
     return{
-      list: {}
+      list: {},
+      tab: null,
+      items: [
+      'Active', 'Applied', 'Rejected', 'Defaulted', 'Repaid', 'Draft'
+      ],
     }
   },
   methods: {

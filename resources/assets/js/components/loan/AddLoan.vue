@@ -33,6 +33,25 @@
                       <v-form ref="form" @submit.prevent>
                         <v-container grid-list-xl fluid>
                           <v-layout wrap>
+                            <!-- <div class="form-group col-md-6">
+                              <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
+                              <div class="col-md-12">
+                                  <select class="custom-select" v-model="form.id">
+                                    <option v-for="client in clients" data-subtext="" :value="client.id">{{client.name}}</option>
+                                  </select>
+                              </div>
+                            </div>
+ -->
+                            <div class="form-group col-md-6">
+                              <label for="password" class="col-md-8 col-form-label text-md-right">Purpose</label>
+                              <div class="col-md-12">
+                                  <select class="custom-select" v-model="form.loan_type">
+                                     <option data-subtext="" value="Holiday">Holiday</option>
+                                     <option data-subtext="" value="Emergency">Emergency</option>
+                                     <option data-subtext="" value="School Fees">School Fees</option>
+                                   </select>
+                              </div>
+                            </div>
                             <v-flex xs12 sm6>
                               <v-text-field
                               v-model="form.loan_id"
@@ -122,11 +141,11 @@
                               <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
                               <div class="col-md-12">
                                   <select class="custom-select" v-model="form.id">
-                                    <option v-for="client in clients" data-subtext="" :value="client.id">{{client.name}}</option>
+                                    <option v-for="client in clientsDetails" data-subtext="" :value="client.id">{{client.name}}</option>
                                   </select>
                               </div>
                             </div>
-                            <div v-for="client in clients" v-if="client.id === form.id">
+                            <div v-for="client in clientsDetails" v-if="client.id === form.id">
                           <v-layout wrap>
                             <v-flex xs12 sm6>
                               <v-text-field
@@ -149,16 +168,6 @@
                               ></v-text-field>
                               <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
                             </v-flex>
-                            <div class="form-group col-md-6">
-                              <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
-                              <div class="col-md-12">
-                                  <select class="custom-select" v-model="form.loan_type">
-                                     <option data-subtext="" value="Holiday">Holiday</option>
-                                     <option data-subtext="" value="Emergency">Emergency</option>
-                                     <option data-subtext="" value="School Fees">School Fees</option>
-                                   </select>
-                              </div>
-                            </div>
                             <v-flex xs12 sm6>
                               <v-text-field
                               v-model="client.name"
@@ -170,70 +179,30 @@
                               ></v-text-field>
                               <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
                             </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.client_id"
-                              color="blue darken-2"
-                              label="Client Number"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
-                            </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.email"
-                              :rules="emailRules"
-                              color="blue darken-2"
-                              label="Email"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.email">{{ errors.email[0] }}</small> -->
-                            </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.id_no"
-                              color="blue darken-2"
-                              label="Id Number"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.id_no">{{ errors.id_no[0] }}</small> -->
-                            </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.address"
-                              :rules="rules.name"
-                              color="blue darken-2"
-                              label="Address"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.address">{{ errors.address[0] }}</small> -->
-                            </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.pin"
-                              color="blue darken-2"
-                              label="Pin"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.city">{{ errors.city[0] }}</small> -->
-                            </v-flex>
-                            <v-flex xs12 sm6>
-                              <v-text-field
-                              v-model="client.phone"
-                              :rules="rules.name"
-                              color="blue darken-2"
-                              label="Phone"
-                              disabled
-                              required
-                              ></v-text-field>
-                              <!-- <small class="has-text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small> -->
-                            </v-flex>
+                            <div v-for="referee in referees" >
+                              <div class="form-group col-md-6">
+                                <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
+                                <div class="col-md-12">
+                                    <select class="custom-select" v-model="form.id">
+                                      <option v-for="client in clientsDetails" data-subtext="" :value="client.id">{{client.name}}</option>
+                                    </select>
+                                </div>
+                              </div>       
+                              <v-flex xs12 sm6>
+                                <v-text-field
+                                v-model="client.name"
+                                :rules="rules.name"
+                                color="blue darken-2"
+                                label="Full name"
+                                disabled
+                                required
+                                ></v-text-field>
+                                <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
+                              </v-flex>    
+                            </div>                 
                           </v-layout>
+                          <v-divider></v-divider>
+                          <v-btn @click="addLine" flat color="orange">Add New</v-btn>
                             </div>
                         </v-container>
                         <v-card-actions>
@@ -245,7 +214,7 @@
                           :loading="loading"
                           flat
                           color="primary"
-                          @click="save"
+                          @click="addNext"
                           >Submit</v-btn>
                         </v-card-actions>
                       </v-form>
@@ -266,7 +235,7 @@
 
 <script>
 export default {
-  props: ['openAddRequest', 'clients'],
+  props: ['openAddRequest', 'clients', 'clientsDetails'],
   components: {
   },
   data() {
@@ -278,6 +247,12 @@ export default {
      interest_rate: '',
    })
    return{
+    referees: [{
+      name: '',
+      id_no: '',
+      amount: '',
+
+    }],
     tab: null,
     items: [
     'Details', 'Referees'
@@ -309,16 +284,18 @@ methods: {
  },
  save() {
    this.loading=true
-   axios.post(`/referee/${this.form.id}`, this.$data.form).
+   axios.post(`/loans/${this.form.id}`, this.$data.form).
    then((response) => {
-     this.loading=false
-     console.log(response);
-        // this.close;
-        // this.resetForm();
-        // this.$emit('closeRequest');
-        this.currentClient = response.data
-        this.$emit('alertRequest');
-        this.$parent.AllClient.push(response.data) 
+      this.tab = this.tab+1
+      this.client.loan_id = this.form.loan_id
+      this.loading=false
+      // console.log(response);
+      // this.close;
+      // this.resetForm();
+      // this.$emit('closeRequest');
+      this.currentClient = response.data
+      this.$emit('alertRequest');
+      this.$parent.AllClient.push(response.data) 
 
       })
    .catch((error) => {
@@ -328,7 +305,7 @@ methods: {
  },
  addNext() {
    this.loading=true
-   axios.post(`/saveNok/${this.currentClient.id}`, this.$data.form).
+   axios.post(`/referee/${this.form.id}`, this.$data.client).
    then((response) => {
      this.loading=false
      console.log(response);
@@ -353,11 +330,11 @@ close() {
 },
 
 addLine: function() {
-  this.form.referee.push({name: '', phone: '', address: '', id_no: ''});
+  this.referees.push({name: '', id_no: '', amount: ''});
 },
 remove: function(product) {
-  const index = this.form.referee.indexOf(product)
-  this.form.referee.splice(index, 1);
+  const index = this.referees.indexOf(product)
+  this.referees.splice(index, 1);
   // this.form.referee.$remove(product);
 },
 },

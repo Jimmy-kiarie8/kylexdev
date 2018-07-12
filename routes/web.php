@@ -9,10 +9,10 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
 Auth::routes();
@@ -23,25 +23,28 @@ Route::get('signup/activate/{token}', 'AuthController@signupActivate');
 
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/manage', function () {
-	    	// $newrole = Auth::user()->roles;
-	    	// foreach ($newrole as $name) {
-	    	// 	$rolename = $name->name;
-	    	// }
-	    	// return view('welcome', compact('rolename'));
-			return view('welcome');
+		// $newrole = Auth::user()->roles;
+		// foreach ($newrole as $name) {
+		// 	$rolename = $name->name;
+		// }
+		// return view('welcome', compact('rolename'));
+		return view('welcome');
 	});
-
 
 	Route::resource('users', 'UserController');
 	Route::resource('clients', 'ClientController');
 	Route::resource('receipts', 'ReceiptController');
+	Route::resource('loans', 'LoanController');
 
 	Route::post('/saveNok/{id}', 'ClientController@saveNok')->name('saveNok');
 	Route::post('/updateNok/{id}', 'ClientController@updateNok')->name('updateNok');
 	Route::post('/ArchivedClients/{id}', 'ClientController@ArchivedClients')->name('ArchivedClients');
 
 	Route::post('/referee/{id}', 'LoanController@referee')->name('referee');
-	
+	Route::post('/loans/{id}', 'LoanController@loans')->name('loans');
+	Route::post('/getLoans', 'LoanController@getLoans')->name('getLoans');
+	Route::post('/getReferees', 'LoanController@getReferees')->name('getReferees');
+
 	Route::post('/getUsers', 'UserController@getUsers')->name('getUsers');
 	// Route::post('/profile/{id}', 'UserController@profile')->name('profile');
 	// Route::post('/userUpdate', 'UserController@userUpdate')->name('userUpdate');

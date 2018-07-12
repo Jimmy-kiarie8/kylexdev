@@ -18,6 +18,7 @@ class CreateRefereesTable extends Migration
             $table->string('client_id');
             $table->string('id_no')->nullable();
             $table->string('amount')->nullable();
+            $table->string('loan_id')->nullable();
             $table->timestamps();
         });
     }

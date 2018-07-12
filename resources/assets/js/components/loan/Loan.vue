@@ -41,19 +41,19 @@
                </v-card-title>
                 <v-data-table
                 :headers="headers"
-                :items="AllClient"
+                :items="AllClientLoans"
                 :search="search"
                 counter
                 class="elevation-1"
                 >
                 <template slot="items" slot-scope="props">
                  <td>
-                   {{ props.item.name }}
+                   {{ props.item.loan_id }}
                  </td>
-                 <td class="text-xs-right">{{ props.item.email }}</td>
-                 <td class="text-xs-right">{{ props.item.id_no }}</td>
-                 <td class="text-xs-right">{{ props.item.phone }}</td>
-                  <td class="text-xs-right">{{ props.item.address }}</td>
+                 <td class="text-xs-right">{{ props.item.loan_type }}</td>
+                 <td class="text-xs-right">{{ props.item.interest_rate }}</td>
+                 <td class="text-xs-right">{{ props.item.balance }}</td>
+                  <!-- <td class="text-xs-right">{{ props.item.address }}</td> -->
                     <td class="justify-center layout px-0">
                      <v-btn icon class="mx-0" @click="editItem(props.item)">
                        <v-icon color="blue darken-2">edit</v-icon>
@@ -91,20 +91,20 @@
                  ></v-text-field>
                </v-card-title>
                 <v-data-table
-                :headers="headers"
-                :items="AllClientAchived"
+                :headers="Refheaders"
+                :items="AllReferres"
                 :search="search"
                 counter
                 class="elevation-1"
                 >
                 <template slot="items" slot-scope="props">
                  <td>
-                   {{ props.item.name }}
+                   {{ props.item.client_id }}
                  </td>
-                 <td class="text-xs-right">{{ props.item.email }}</td>
+                 <td class="text-xs-right">{{ props.item.amount }}</td>
                  <td class="text-xs-right">{{ props.item.id_no }}</td>
-                 <td class="text-xs-right">{{ props.item.phone }}</td>
-                  <td class="text-xs-right">{{ props.item.address }}</td>
+                 <td class="text-xs-right">{{ props.item.amount }}</td>
+                  <td class="text-xs-right">{{ props.item.loan_id }}</td>
                     <td class="justify-center layout px-0">
                    <v-btn icon class="mx-0" @click="refresh(props.item)">
                      <v-icon color="blue darken-2">refresh</v-icon>
@@ -141,7 +141,7 @@ v-model="snackbar"
 <v-icon dark right>check_circle</v-icon>
 </v-snackbar>
 </v-content>
-<AddLoan @closeRequest="close" :openAddRequest="dispAdd" @alertRequest="showAlert" :clients="AllClient"></AddLoan>
+<AddLoan @closeRequest="close" :openAddRequest="dispAdd" @alertRequest="showAlert" :clients="AllClientLoans" :clientsDetails="AllClientsDetails"></AddLoan>
 <EditLoan @closeRequest="close" :openEditRequest="pdialog2" :editedItemCon="editedItem" @alertRequest="showAlert" :Showrole="AllRoles"></EditLoan>
 <ShowLoan @closeRequest="close" :openRequest="dispClient" :client="editedItem"></ShowLoan>
 </div>
@@ -163,13 +163,22 @@ export default {
     items: [
     'Details', 'Referees'
     ],
-    AllClientAchived: [],
+    AllReferres: [],
       headers: [
-      { text: 'Name', align: 'left', value: 'name'},
-      { text: 'email', value: 'email' },
-      { text: 'Id Number', value: 'id_no' },
-      { text: 'Phone Number', value: 'phone' },
+      { text: 'Loan Id', align: 'left', value: 'loan_id'},
+      { text: 'Loan Type', value: 'loan_type' },
+      { text: 'Interest Rate', value: 'interest_rate' },
+      // { text: 'Phone Number', value: 'phone' },
+      { text: 'Balance', value: 'balance' },
     { text: 'Actions', value: 'name', sortable: false }
+    ],
+    Refheaders: [
+      { text: 'Client Id', align: 'left', value: 'client_id'},
+      { text: 'Amount', value: 'amount' },
+      { text: 'Id Number', value: 'id_no' },
+      { text: 'Amount Number', value: 'amount' },
+      { text: 'Loan Id', value: 'loan_id' },
+      { text: 'Actions', value: 'name', sortable: false }
     ],
     AllRoles: {},
     search: '',
@@ -185,7 +194,8 @@ export default {
     timeout: 5000,
     color: '',
     message: '',
-    AllClient: [],
+    AllClientLoans: [],
+    AllClientsDetails: {},
     editedItem: {},
     delItem: {},
     emailRules: [
@@ -205,7 +215,7 @@ export default {
 methods: {  
   ClientShow(item) {
     this.editedItem = Object.assign({}, item)
-    this.editedIndex = this.AllClient.indexOf(item)
+    this.editedIndex = this.AllClientLoans.indexOf(item)
     this.dispClient = true
   },
   openUser(){
@@ -213,7 +223,7 @@ methods: {
   },
   editItem(item) {
     this.editedItem = Object.assign({}, item)
-    this.editedIndex = this.AllClient.indexOf(item)
+    this.editedIndex = this.AllClientLoans.indexOf(item)
     // console.log(this.editedItem);
     this.pdialog2 = true
   },
@@ -225,18 +235,18 @@ methods: {
   },
   deleteItem(item) {
     this.delItem = Object.assign({}, item)
-    this.editedIndex = this.AllClient.indexOf(item)
-    const index = this.AllClient.indexOf(item)
+    this.editedIndex = this.AllClientLoans.indexOf(item)
+    const index = this.AllClientLoans.indexOf(item)
     if (confirm('Are you sure you want to delete this item?')) {
       // this.loading = true
       axios.delete(`/clients/${this.delItem.id}`)
       .then((response) => {
-        this.AllClient.splice(index, 1)
+        this.AllClientLoans.splice(index, 1)
         // this.loading = false
         this.message = 'deleted successifully'
         this.color = 'indigo'
         this.snackbar = true
-        this.AllClientAchived.push(response.data) 
+        this.AllReferres.push(response.data) 
       })
       .catch((error) => {
         // this.loading = false
@@ -249,14 +259,14 @@ methods: {
   },
   refresh(item) {
       this.delItem = Object.assign({}, item)
-      this.editedIndex = this.AllClientAchived.indexOf(item)
-      const index = this.AllClientAchived.indexOf(item)
+      this.editedIndex = this.AllReferres.indexOf(item)
+      const index = this.AllReferres.indexOf(item)
       if (confirm('Are you sure you?')) {
         // this.loading = true
         axios.post(`/ArchivedClients/${this.delItem.id}`)
         .then((response) => {
-          this.AllClientAchived.splice(index, 1)
-          this.AllClient.push(response.data) 
+          this.AllReferres.splice(index, 1)
+          this.AllClientLoans.push(response.data) 
           // this.loading = false
           this.message = 'successifully'
           this.color = 'indigo'
@@ -277,21 +287,28 @@ methods: {
 },
 mounted() {
   this.loader=true
-  axios.post('getClients')
+  axios.post('getLoans')
   .then((response) => {
     this.loader=false
-    this.AllClient = response.data
+    this.AllClientLoans = response.data
   })
   .catch((error) => {
     this.loader=false
     this.errors = error.response.data.errors
   })
 
+  axios.post('getClients')
+  .then((response) => {
+    this.AllClientsDetails = response.data
+  })
+  .catch((error) => {
+    this.errors = error.response.data.errors
+  })
 
-  axios.post('getArchivedClients')
+  axios.post('getReferees')
   .then((response) => {
     this.loader=false
-    this.AllClientAchived = response.data
+    this.AllReferres = response.data
   })
   .catch((error) => {
     this.loader=false
