@@ -84497,7 +84497,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.content--wrap[data-v-f56d2d96]{\r\n margin-top: -100px\n}\n#profile[data-v-f56d2d96] { \r\n width: 70px;\r\n height: 60px;\r\n border-radius: 50%;\r\n margin-left: 80px;\r\n margin-top: -30px;\n}\ni[data-v-f56d2d96]{\r\n padding: 7px;\r\n background: #f0f0f0;\r\n border-radius: 50%;\n}\n.list-group-item[data-v-f56d2d96]:hover, .list-group-item[data-v-f56d2d96]:focus {\r\n z-index: 1;\r\n background: #f9f9f9;\r\n text-decoration: none;\n}\r\n", ""]);
+exports.push([module.i, "\n.content--wrap[data-v-f56d2d96]{\r\n  margin-top: -100px\n}\n#profile[data-v-f56d2d96] { \r\n  width: 70px;\r\n  height: 60px;\r\n  border-radius: 50%;\r\n  margin-left: 80px;\r\n  margin-top: -30px;\n}\ni[data-v-f56d2d96]{\r\n  padding: 7px;\r\n  background: #f0f0f0;\r\n  border-radius: 50%;\n}\n.list-group-item[data-v-f56d2d96]:hover, .list-group-item[data-v-f56d2d96]:focus {\r\n  z-index: 1;\r\n  background: #f9f9f9;\r\n  text-decoration: none;\n}\r\n", ""]);
 
 // exports
 
@@ -84508,52 +84508,6 @@ exports.push([module.i, "\n.content--wrap[data-v-f56d2d96]{\r\n margin-top: -100
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -85099,6 +85053,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['openAddRequest', 'clients', 'clientsDetails'],
@@ -85358,6 +85316,128 @@ var render = function() {
                                                             attrs: { wrap: "" }
                                                           },
                                                           [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "form-group col-md-6"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "label",
+                                                                  {
+                                                                    staticClass:
+                                                                      "col-md-8 col-form-label text-md-right",
+                                                                    attrs: {
+                                                                      for:
+                                                                        "password"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Member"
+                                                                    )
+                                                                  ]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "div",
+                                                                  {
+                                                                    staticClass:
+                                                                      "col-md-12"
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "select",
+                                                                      {
+                                                                        directives: [
+                                                                          {
+                                                                            name:
+                                                                              "model",
+                                                                            rawName:
+                                                                              "v-model",
+                                                                            value:
+                                                                              _vm
+                                                                                .form
+                                                                                .id,
+                                                                            expression:
+                                                                              "form.id"
+                                                                          }
+                                                                        ],
+                                                                        staticClass:
+                                                                          "custom-select",
+                                                                        on: {
+                                                                          change: function(
+                                                                            $event
+                                                                          ) {
+                                                                            var $$selectedVal = Array.prototype.filter
+                                                                              .call(
+                                                                                $event
+                                                                                  .target
+                                                                                  .options,
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  return o.selected
+                                                                                }
+                                                                              )
+                                                                              .map(
+                                                                                function(
+                                                                                  o
+                                                                                ) {
+                                                                                  var val =
+                                                                                    "_value" in
+                                                                                    o
+                                                                                      ? o._value
+                                                                                      : o.value
+                                                                                  return val
+                                                                                }
+                                                                              )
+                                                                            _vm.$set(
+                                                                              _vm.form,
+                                                                              "id",
+                                                                              $event
+                                                                                .target
+                                                                                .multiple
+                                                                                ? $$selectedVal
+                                                                                : $$selectedVal[0]
+                                                                            )
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      _vm._l(
+                                                                        _vm.clientsDetails,
+                                                                        function(
+                                                                          client
+                                                                        ) {
+                                                                          return _c(
+                                                                            "option",
+                                                                            {
+                                                                              attrs: {
+                                                                                "data-subtext":
+                                                                                  ""
+                                                                              },
+                                                                              domProps: {
+                                                                                value:
+                                                                                  client.id
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _vm._v(
+                                                                                _vm._s(
+                                                                                  client.name
+                                                                                )
+                                                                              )
+                                                                            ]
+                                                                          )
+                                                                        }
+                                                                      )
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
                                                             _c(
                                                               "div",
                                                               {
@@ -86176,199 +86256,218 @@ var render = function() {
                                                                             )
                                                                           ],
                                                                           1
-                                                                        ),
-                                                                        _vm._v(
-                                                                          " "
-                                                                        ),
-                                                                        _vm._l(
-                                                                          _vm.referees,
-                                                                          function(
-                                                                            referee
-                                                                          ) {
-                                                                            return _c(
-                                                                              "div",
-                                                                              [
-                                                                                _c(
-                                                                                  "div",
-                                                                                  {
-                                                                                    staticClass:
-                                                                                      "form-group col-md-6"
-                                                                                  },
-                                                                                  [
-                                                                                    _c(
-                                                                                      "label",
-                                                                                      {
-                                                                                        staticClass:
-                                                                                          "col-md-8 col-form-label text-md-right",
-                                                                                        attrs: {
-                                                                                          for:
-                                                                                            "password"
-                                                                                        }
-                                                                                      },
-                                                                                      [
-                                                                                        _vm._v(
-                                                                                          "Member"
-                                                                                        )
-                                                                                      ]
-                                                                                    ),
-                                                                                    _vm._v(
-                                                                                      " "
-                                                                                    ),
-                                                                                    _c(
-                                                                                      "div",
-                                                                                      {
-                                                                                        staticClass:
-                                                                                          "col-md-12"
-                                                                                      },
-                                                                                      [
-                                                                                        _c(
-                                                                                          "select",
-                                                                                          {
-                                                                                            directives: [
-                                                                                              {
-                                                                                                name:
-                                                                                                  "model",
-                                                                                                rawName:
-                                                                                                  "v-model",
-                                                                                                value:
-                                                                                                  _vm
-                                                                                                    .form
-                                                                                                    .id,
-                                                                                                expression:
-                                                                                                  "form.id"
-                                                                                              }
-                                                                                            ],
-                                                                                            staticClass:
-                                                                                              "custom-select",
-                                                                                            on: {
-                                                                                              change: function(
-                                                                                                $event
-                                                                                              ) {
-                                                                                                var $$selectedVal = Array.prototype.filter
-                                                                                                  .call(
-                                                                                                    $event
-                                                                                                      .target
-                                                                                                      .options,
-                                                                                                    function(
-                                                                                                      o
-                                                                                                    ) {
-                                                                                                      return o.selected
-                                                                                                    }
-                                                                                                  )
-                                                                                                  .map(
-                                                                                                    function(
-                                                                                                      o
-                                                                                                    ) {
-                                                                                                      var val =
-                                                                                                        "_value" in
-                                                                                                        o
-                                                                                                          ? o._value
-                                                                                                          : o.value
-                                                                                                      return val
-                                                                                                    }
-                                                                                                  )
-                                                                                                _vm.$set(
-                                                                                                  _vm.form,
-                                                                                                  "id",
-                                                                                                  $event
-                                                                                                    .target
-                                                                                                    .multiple
-                                                                                                    ? $$selectedVal
-                                                                                                    : $$selectedVal[0]
-                                                                                                )
-                                                                                              }
-                                                                                            }
-                                                                                          },
-                                                                                          _vm._l(
-                                                                                            _vm.clientsDetails,
-                                                                                            function(
-                                                                                              client
-                                                                                            ) {
-                                                                                              return _c(
-                                                                                                "option",
-                                                                                                {
-                                                                                                  attrs: {
-                                                                                                    "data-subtext":
-                                                                                                      ""
-                                                                                                  },
-                                                                                                  domProps: {
-                                                                                                    value:
-                                                                                                      client.id
-                                                                                                  }
-                                                                                                },
-                                                                                                [
-                                                                                                  _vm._v(
-                                                                                                    _vm._s(
-                                                                                                      client.name
-                                                                                                    )
-                                                                                                  )
-                                                                                                ]
-                                                                                              )
-                                                                                            }
-                                                                                          )
-                                                                                        )
-                                                                                      ]
-                                                                                    )
-                                                                                  ]
-                                                                                ),
-                                                                                _vm._v(
-                                                                                  " "
-                                                                                ),
-                                                                                _c(
-                                                                                  "v-flex",
-                                                                                  {
-                                                                                    attrs: {
-                                                                                      xs12:
-                                                                                        "",
-                                                                                      sm6:
-                                                                                        ""
-                                                                                    }
-                                                                                  },
-                                                                                  [
-                                                                                    _c(
-                                                                                      "v-text-field",
-                                                                                      {
-                                                                                        attrs: {
-                                                                                          rules:
-                                                                                            _vm
-                                                                                              .rules
-                                                                                              .name,
-                                                                                          color:
-                                                                                            "blue darken-2",
-                                                                                          label:
-                                                                                            "Full name",
-                                                                                          disabled:
-                                                                                            "",
-                                                                                          required:
-                                                                                            ""
-                                                                                        },
-                                                                                        model: {
-                                                                                          value:
-                                                                                            client.name,
-                                                                                          callback: function(
-                                                                                            $$v
-                                                                                          ) {
-                                                                                            _vm.$set(
-                                                                                              client,
-                                                                                              "name",
-                                                                                              $$v
-                                                                                            )
-                                                                                          },
-                                                                                          expression:
-                                                                                            "client.name"
-                                                                                        }
-                                                                                      }
-                                                                                    )
-                                                                                  ],
-                                                                                  1
-                                                                                )
-                                                                              ],
-                                                                              1
-                                                                            )
-                                                                          }
                                                                         )
                                                                       ],
-                                                                      2
+                                                                      1
+                                                                    ),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "v-layout",
+                                                                      _vm._l(
+                                                                        _vm.referees,
+                                                                        function(
+                                                                          referee
+                                                                        ) {
+                                                                          return _c(
+                                                                            "div",
+                                                                            [
+                                                                              _c(
+                                                                                "div",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "form-group col-md-6"
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "label",
+                                                                                    {
+                                                                                      staticClass:
+                                                                                        "col-md-8 col-form-label text-md-right",
+                                                                                      attrs: {
+                                                                                        for:
+                                                                                          "password"
+                                                                                      }
+                                                                                    },
+                                                                                    [
+                                                                                      _vm._v(
+                                                                                        "Member"
+                                                                                      )
+                                                                                    ]
+                                                                                  ),
+                                                                                  _vm._v(
+                                                                                    " "
+                                                                                  ),
+                                                                                  _c(
+                                                                                    "div",
+                                                                                    {
+                                                                                      staticClass:
+                                                                                        "col-md-12"
+                                                                                    },
+                                                                                    [
+                                                                                      _c(
+                                                                                        "select",
+                                                                                        {
+                                                                                          directives: [
+                                                                                            {
+                                                                                              name:
+                                                                                                "model",
+                                                                                              rawName:
+                                                                                                "v-model",
+                                                                                              value:
+                                                                                                _vm
+                                                                                                  .form
+                                                                                                  .id,
+                                                                                              expression:
+                                                                                                "form.id"
+                                                                                            }
+                                                                                          ],
+                                                                                          staticClass:
+                                                                                            "custom-select",
+                                                                                          on: {
+                                                                                            change: function(
+                                                                                              $event
+                                                                                            ) {
+                                                                                              var $$selectedVal = Array.prototype.filter
+                                                                                                .call(
+                                                                                                  $event
+                                                                                                    .target
+                                                                                                    .options,
+                                                                                                  function(
+                                                                                                    o
+                                                                                                  ) {
+                                                                                                    return o.selected
+                                                                                                  }
+                                                                                                )
+                                                                                                .map(
+                                                                                                  function(
+                                                                                                    o
+                                                                                                  ) {
+                                                                                                    var val =
+                                                                                                      "_value" in
+                                                                                                      o
+                                                                                                        ? o._value
+                                                                                                        : o.value
+                                                                                                    return val
+                                                                                                  }
+                                                                                                )
+                                                                                              _vm.$set(
+                                                                                                _vm.form,
+                                                                                                "id",
+                                                                                                $event
+                                                                                                  .target
+                                                                                                  .multiple
+                                                                                                  ? $$selectedVal
+                                                                                                  : $$selectedVal[0]
+                                                                                              )
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        _vm._l(
+                                                                                          _vm.clientsDetails,
+                                                                                          function(
+                                                                                            client
+                                                                                          ) {
+                                                                                            return _c(
+                                                                                              "option",
+                                                                                              {
+                                                                                                attrs: {
+                                                                                                  "data-subtext":
+                                                                                                    ""
+                                                                                                },
+                                                                                                domProps: {
+                                                                                                  value:
+                                                                                                    client.id
+                                                                                                }
+                                                                                              },
+                                                                                              [
+                                                                                                _vm._v(
+                                                                                                  _vm._s(
+                                                                                                    client.name
+                                                                                                  )
+                                                                                                )
+                                                                                              ]
+                                                                                            )
+                                                                                          }
+                                                                                        )
+                                                                                      )
+                                                                                    ]
+                                                                                  )
+                                                                                ]
+                                                                              ),
+                                                                              _vm._v(
+                                                                                " "
+                                                                              ),
+                                                                              _vm._l(
+                                                                                _vm.clientsDetails,
+                                                                                function(
+                                                                                  client
+                                                                                ) {
+                                                                                  return client.id ===
+                                                                                    _vm
+                                                                                      .form
+                                                                                      .id
+                                                                                    ? _c(
+                                                                                        "div",
+                                                                                        [
+                                                                                          _c(
+                                                                                            "v-flex",
+                                                                                            {
+                                                                                              attrs: {
+                                                                                                xs12:
+                                                                                                  "",
+                                                                                                sm6:
+                                                                                                  ""
+                                                                                              }
+                                                                                            },
+                                                                                            [
+                                                                                              _c(
+                                                                                                "v-text-field",
+                                                                                                {
+                                                                                                  attrs: {
+                                                                                                    rules:
+                                                                                                      _vm
+                                                                                                        .rules
+                                                                                                        .name,
+                                                                                                    color:
+                                                                                                      "blue darken-2",
+                                                                                                    label:
+                                                                                                      "Full name",
+                                                                                                    disabled:
+                                                                                                      "",
+                                                                                                    required:
+                                                                                                      ""
+                                                                                                  },
+                                                                                                  model: {
+                                                                                                    value:
+                                                                                                      client.name,
+                                                                                                    callback: function(
+                                                                                                      $$v
+                                                                                                    ) {
+                                                                                                      _vm.$set(
+                                                                                                        client,
+                                                                                                        "name",
+                                                                                                        $$v
+                                                                                                      )
+                                                                                                    },
+                                                                                                    expression:
+                                                                                                      "client.name"
+                                                                                                  }
+                                                                                                }
+                                                                                              )
+                                                                                            ],
+                                                                                            1
+                                                                                          )
+                                                                                        ],
+                                                                                        1
+                                                                                      )
+                                                                                    : _vm._e()
+                                                                                }
+                                                                              )
+                                                                            ],
+                                                                            2
+                                                                          )
+                                                                        }
+                                                                      )
                                                                     ),
                                                                     _vm._v(" "),
                                                                     _c(
@@ -86628,14 +86727,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var ActiveLoan = __webpack_require__(131);
-// let ActiveLoan = require('./ActiveLoan')
-// let ActiveLoan = require('./ActiveLoan')
+var AppliedLoan = __webpack_require__(139);
+var DefaultedLoans = __webpack_require__(144);
+var DraftLoans = __webpack_require__(149);
+var RejectedLoans = __webpack_require__(154);
+var RepaidLoans = __webpack_require__(159);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['openRequest', 'client'],
   components: {
-    ActiveLoan: ActiveLoan
+    ActiveLoan: ActiveLoan, AppliedLoan: AppliedLoan, RejectedLoans: RejectedLoans, DraftLoans: DraftLoans, DefaultedLoans: DefaultedLoans, RepaidLoans: RepaidLoans
   },
   data: function data() {
     return {
@@ -86645,11 +86758,7 @@ var ActiveLoan = __webpack_require__(131);
     };
   },
 
-  methods: {
-    close: function close() {
-      this.$emit('closeRequest');
-    }
-  },
+  methods: {},
   mounted: function mounted() {}
 });
 
@@ -86666,97 +86775,44 @@ var render = function() {
     { attrs: { row: "", "justify-center": "" } },
     [
       _c(
-        "v-dialog",
-        {
-          attrs: { persistent: "", "max-width": "1300px" },
-          model: {
-            value: _vm.openRequest,
-            callback: function($$v) {
-              _vm.openRequest = $$v
-            },
-            expression: "openRequest"
-          }
-        },
+        "v-card",
         [
           _c(
-            "v-card",
+            "v-card-text",
             [
-              _c("v-card-title", { attrs: { fixed: "" } }, [
-                _c("span", { staticClass: "headline" }, [_vm._v("Add Loan")])
-              ]),
-              _vm._v(" "),
               _c(
-                "v-card-text",
+                "v-container",
+                { attrs: { "grid-list-md": "" } },
                 [
                   _c(
-                    "v-container",
-                    { attrs: { "grid-list-md": "" } },
+                    "v-layout",
+                    { attrs: { wrap: "" } },
                     [
                       _c(
-                        "v-layout",
-                        { attrs: { wrap: "" } },
+                        "v-card",
+                        { attrs: { flat: "" } },
                         [
-                          _c(
-                            "v-card",
-                            { attrs: { flat: "" } },
-                            [
-                              _c("v-card-text", [
+                          _c("v-card-text", [
+                            _c(
+                              "div",
+                              [
                                 _c(
-                                  "div",
+                                  "v-toolbar",
+                                  {
+                                    attrs: {
+                                      color: "indigo",
+                                      dark: "",
+                                      tabs: ""
+                                    }
+                                  },
                                   [
                                     _c(
-                                      "v-toolbar",
+                                      "v-tabs",
                                       {
                                         attrs: {
                                           color: "indigo",
-                                          dark: "",
-                                          tabs: ""
-                                        }
-                                      },
-                                      [
-                                        _c(
-                                          "v-tabs",
-                                          {
-                                            attrs: {
-                                              color: "indigo",
-                                              "align-with-title": ""
-                                            },
-                                            model: {
-                                              value: _vm.tab,
-                                              callback: function($$v) {
-                                                _vm.tab = $$v
-                                              },
-                                              expression: "tab"
-                                            }
-                                          },
-                                          [
-                                            _c("v-tabs-slider", {
-                                              attrs: { color: "yellow" }
-                                            }),
-                                            _vm._v(" "),
-                                            _vm._l(_vm.items, function(item) {
-                                              return _c(
-                                                "v-tab",
-                                                { key: item },
-                                                [
-                                                  _vm._v(
-                                                    "\n                         " +
-                                                      _vm._s(item) +
-                                                      "\n                       "
-                                                  )
-                                                ]
-                                              )
-                                            })
-                                          ],
-                                          2
-                                        )
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "v-tabs-items",
-                                      {
+                                          "align-with-title": ""
+                                        },
                                         model: {
                                           value: _vm.tab,
                                           callback: function($$v) {
@@ -86766,46 +86822,110 @@ var render = function() {
                                         }
                                       },
                                       [
-                                        _c(
-                                          "v-tab-item",
-                                          [
-                                            _c(
-                                              "v-card",
-                                              { attrs: { flat: "" } },
-                                              [_c("ActiveLoan")],
-                                              1
+                                        _c("v-tabs-slider", {
+                                          attrs: { color: "yellow" }
+                                        }),
+                                        _vm._v(" "),
+                                        _vm._l(_vm.items, function(item) {
+                                          return _c("v-tab", { key: item }, [
+                                            _vm._v(
+                                              "\n               " +
+                                                _vm._s(item) +
+                                                "\n            "
                                             )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
+                                          ])
+                                        })
+                                      ],
+                                      2
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "v-tabs-items",
+                                  {
+                                    model: {
+                                      value: _vm.tab,
+                                      callback: function($$v) {
+                                        _vm.tab = $$v
+                                      },
+                                      expression: "tab"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab-item",
+                                      [
                                         _c(
-                                          "v-tab-item",
-                                          [
-                                            _c("v-card", {
-                                              attrs: { flat: "" }
-                                            })
-                                          ],
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("ActiveLoan")],
                                           1
-                                        ),
-                                        _vm._v(" "),
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-tab-item",
+                                      [
                                         _c(
-                                          "v-tab-item",
-                                          [
-                                            _c("v-card", {
-                                              attrs: { flat: "" }
-                                            })
-                                          ],
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("AppliedLoan")],
                                           1
-                                        ),
-                                        _vm._v(" "),
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-tab-item",
+                                      [
                                         _c(
-                                          "v-tab-item",
-                                          [
-                                            _c("v-card", {
-                                              attrs: { flat: "" }
-                                            })
-                                          ],
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("RejectedLoans")],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-tab-item",
+                                      [
+                                        _c(
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("DraftLoans")],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-tab-item",
+                                      [
+                                        _c(
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("DefaultedLoans")],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-tab-item",
+                                      [
+                                        _c(
+                                          "v-card",
+                                          { attrs: { flat: "" } },
+                                          [_c("RepaidLoans")],
                                           1
                                         )
                                       ],
@@ -86814,10 +86934,10 @@ var render = function() {
                                   ],
                                   1
                                 )
-                              ])
-                            ],
-                            1
-                          )
+                              ],
+                              1
+                            )
+                          ])
                         ],
                         1
                       )
@@ -88119,9 +88239,9 @@ var render = function() {
                                       _vm._l(_vm.items, function(item) {
                                         return _c("v-tab", { key: item }, [
                                           _vm._v(
-                                            "\n              " +
+                                            "\n                " +
                                               _vm._s(item) +
-                                              "\n            "
+                                              "\n             "
                                           )
                                         ])
                                       })
@@ -88148,259 +88268,20 @@ var render = function() {
                                     "v-tab-item",
                                     [
                                       _c(
-                                        "v-card-title",
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            {
-                                              attrs: {
-                                                color: "primary",
-                                                flat: ""
-                                              },
-                                              on: { click: _vm.openUser }
-                                            },
-                                            [_vm._v("Add Loan")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("v-spacer"),
-                                          _vm._v(" "),
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              "append-icon": "search",
-                                              label: "Search",
-                                              "single-line": "",
-                                              "hide-details": ""
-                                            },
-                                            model: {
-                                              value: _vm.search,
-                                              callback: function($$v) {
-                                                _vm.search = $$v
-                                              },
-                                              expression: "search"
-                                            }
-                                          })
-                                        ],
-                                        1
+                                        "v-btn",
+                                        {
+                                          attrs: { color: "primary", flat: "" },
+                                          on: { click: _vm.openUser }
+                                        },
+                                        [_vm._v("Add Loan")]
                                       ),
                                       _vm._v(" "),
-                                      _c(
-                                        "v-data-table",
-                                        {
-                                          staticClass: "elevation-1",
-                                          attrs: {
-                                            headers: _vm.headers,
-                                            items: _vm.AllClientLoans,
-                                            search: _vm.search,
-                                            counter: ""
-                                          },
-                                          scopedSlots: _vm._u([
-                                            {
-                                              key: "items",
-                                              fn: function(props) {
-                                                return [
-                                                  _c("td", [
-                                                    _vm._v(
-                                                      "\n                   " +
-                                                        _vm._s(
-                                                          props.item.loan_id
-                                                        ) +
-                                                        "\n                 "
-                                                    )
-                                                  ]),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "text-xs-right"
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(
-                                                          props.item.loan_type
-                                                        )
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "text-xs-right"
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(
-                                                          props.item
-                                                            .interest_rate
-                                                        )
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "text-xs-right"
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(
-                                                          props.item.balance
-                                                        )
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "td",
-                                                    {
-                                                      staticClass:
-                                                        "justify-center layout px-0"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "v-btn",
-                                                        {
-                                                          staticClass: "mx-0",
-                                                          attrs: { icon: "" },
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              _vm.editItem(
-                                                                props.item
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                color:
-                                                                  "blue darken-2"
-                                                              }
-                                                            },
-                                                            [_vm._v("edit")]
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-btn",
-                                                        {
-                                                          staticClass: "mx-0",
-                                                          attrs: { icon: "" },
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              _vm.deleteItem(
-                                                                props.item
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                color:
-                                                                  "pink darken-2"
-                                                              }
-                                                            },
-                                                            [_vm._v("delete")]
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-btn",
-                                                        {
-                                                          staticClass: "mx-0",
-                                                          attrs: { icon: "" },
-                                                          on: {
-                                                            click: function(
-                                                              $event
-                                                            ) {
-                                                              _vm.ClientShow(
-                                                                props.item
-                                                              )
-                                                            }
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                color:
-                                                                  "blue darken-2"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "visibility"
-                                                              )
-                                                            ]
-                                                          )
-                                                        ],
-                                                        1
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              }
-                                            },
-                                            {
-                                              key: "pageText",
-                                              fn: function(ref) {
-                                                var pageStart = ref.pageStart
-                                                var pageStop = ref.pageStop
-                                                return [
-                                                  _vm._v(
-                                                    "\n                From " +
-                                                      _vm._s(pageStart) +
-                                                      " to " +
-                                                      _vm._s(pageStop) +
-                                                      "\n              "
-                                                  )
-                                                ]
-                                              }
-                                            }
-                                          ])
-                                        },
-                                        [
-                                          _c(
-                                            "v-alert",
-                                            {
-                                              attrs: {
-                                                slot: "no-results",
-                                                value: true,
-                                                color: "error",
-                                                icon: "warning"
-                                              },
-                                              slot: "no-results"
-                                            },
-                                            [
-                                              _vm._v(
-                                                '\n                Your search for "' +
-                                                  _vm._s(_vm.search) +
-                                                  '" found no results.\n              '
-                                              )
-                                            ]
-                                          )
-                                        ],
-                                        1
-                                      )
+                                      _c("ShowLoan", {
+                                        attrs: {
+                                          openRequest: _vm.dispClient,
+                                          client: _vm.editedItem
+                                        }
+                                      })
                                     ],
                                     1
                                   ),
@@ -88449,11 +88330,11 @@ var render = function() {
                                                 return [
                                                   _c("td", [
                                                     _vm._v(
-                                                      "\n                   " +
+                                                      "\n           " +
                                                         _vm._s(
                                                           props.item.client_id
                                                         ) +
-                                                        "\n                 "
+                                                        "\n        "
                                                     )
                                                   ]),
                                                   _vm._v(" "),
@@ -88564,11 +88445,11 @@ var render = function() {
                                                 var pageStop = ref.pageStop
                                                 return [
                                                   _vm._v(
-                                                    "\n                From " +
+                                                    "\n     From " +
                                                       _vm._s(pageStart) +
                                                       " to " +
                                                       _vm._s(pageStop) +
-                                                      "\n              "
+                                                      "\n  "
                                                   )
                                                 ]
                                               }
@@ -88589,9 +88470,9 @@ var render = function() {
                                             },
                                             [
                                               _vm._v(
-                                                '\n                Your search for "' +
+                                                '\n     Your search for "' +
                                                   _vm._s(_vm.search) +
-                                                  '" found no results.\n              '
+                                                  '" found no results.\n  '
                                               )
                                             ]
                                           )
@@ -88694,17 +88575,21 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(136)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(132)
 /* template */
-var __vue_template__ = __webpack_require__(133)
+var __vue_template__ = __webpack_require__(138)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-62af83e8"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -88811,6 +88696,420 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllActiveLoans: []
+      };
+   },
+
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
+
+      axios.post('getLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllActiveLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
+});
+
+/***/ }),
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(137);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("02ee3204", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-62af83e8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ActiveLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-62af83e8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ActiveLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-62af83e8]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-62af83e8]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllActiveLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.interest_rate)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
+                                      )
+                                    ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-62af83e8", module.exports)
+  }
+}
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(140)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(142)
+/* template */
+var __vue_template__ = __webpack_require__(143)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-0287a96a"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\loan\\AppliedLoans.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0287a96a", Component.options)
+  } else {
+    hotAPI.reload("data-v-0287a96a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(141);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("3712dbf1", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0287a96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AppliedLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0287a96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AppliedLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-0287a96a]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-0287a96a]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 142 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -88830,359 +89129,215 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['user'],
-  data: function data() {
-    return {
-      AllReferres: [],
-      headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Interest Rate', value: 'interest_rate' },
-      // { text: 'Phone Number', value: 'phone' },
-      { text: 'Balance', value: 'balance' }, { text: 'Actions', value: 'name', sortable: false }],
-      search: '',
-      AllActiveLoans: []
-    };
-  },
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllActiveLoans: []
+      };
+   },
 
-  methods: {
-    close: function close() {
-      this.dispAdd = this.dispClient = this.pdialog2 = false;
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
 
-    axios.post('getActiveLoans').then(function (response) {
-      _this.loader = false;
-      _this.AllActiveLoans = response.data;
-    }).catch(function (error) {
-      _this.errors = error.response.data.errors;
-    });
-  }
+      axios.post('getAppliedLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllActiveLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
 });
 
 /***/ }),
-/* 133 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-app", [
-    _c(
-      "div",
-      [
-        _c(
-          "v-content",
-          [
-            _c(
-              "v-container",
-              { attrs: { fluid: "", "fill-height": "" } },
-              [
-                _c(
-                  "v-layout",
-                  { attrs: { "justify-center": "", "align-center": "" } },
-                  [
-                    _c(
-                      "div",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.loader,
-                            expression: "loader"
-                          }
-                        ],
-                        staticStyle: { "text-align": "center" }
-                      },
-                      [
-                        _c("v-progress-circular", {
-                          staticStyle: { margin: "1rem" },
-                          attrs: { width: 3, indeterminate: "", color: "red" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: !_vm.loader,
-                            expression: "!loader"
-                          }
-                        ],
-                        staticClass: "container"
-                      },
-                      [
-                        _c("div", [
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
                           _c(
-                            "div",
+                            "v-card-title",
                             [
-                              _c(
-                                "v-toolbar",
-                                {
-                                  attrs: { color: "indigo", dark: "", tabs: "" }
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
                                 },
-                                [
-                                  _c(
-                                    "v-tabs",
-                                    {
-                                      attrs: {
-                                        color: "indigo",
-                                        "align-with-title": ""
-                                      },
-                                      model: {
-                                        value: _vm.tab,
-                                        callback: function($$v) {
-                                          _vm.tab = $$v
-                                        },
-                                        expression: "tab"
-                                      }
-                                    },
-                                    [
-                                      _c("v-tabs-slider", {
-                                        attrs: { color: "yellow" }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm._l(_vm.items, function(item) {
-                                        return _c("v-tab", { key: item }, [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(item) +
-                                              "\n             "
-                                          )
-                                        ])
-                                      })
-                                    ],
-                                    2
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-title",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c("v-text-field", {
-                                    attrs: {
-                                      "append-icon": "search",
-                                      label: "Search",
-                                      "single-line": "",
-                                      "hide-details": ""
-                                    },
-                                    model: {
-                                      value: _vm.search,
-                                      callback: function($$v) {
-                                        _vm.search = $$v
-                                      },
-                                      expression: "search"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-data-table",
-                                {
-                                  staticClass: "elevation-1",
-                                  attrs: {
-                                    headers: _vm.headers,
-                                    items: _vm.AllActiveLoans,
-                                    search: _vm.search,
-                                    counter: ""
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
                                   },
-                                  scopedSlots: _vm._u([
-                                    {
-                                      key: "items",
-                                      fn: function(props) {
-                                        return [
-                                          _c("td", [
-                                            _vm._v(
-                                              "\n           " +
-                                                _vm._s(props.item.loan_id) +
-                                                "\n        "
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "text-xs-right" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(props.item.loan_type)
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "text-xs-right" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(props.item.interest_rate)
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "text-xs-right" },
-                                            [_vm._v(_vm._s(props.item.balance))]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass:
-                                                "justify-center layout px-0"
-                                            },
-                                            [
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  staticClass: "mx-0",
-                                                  attrs: { icon: "" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      _vm.editItem(props.item)
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-icon",
-                                                    {
-                                                      attrs: {
-                                                        color: "blue darken-2"
-                                                      }
-                                                    },
-                                                    [_vm._v("edit")]
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  staticClass: "mx-0",
-                                                  attrs: { icon: "" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      _vm.deleteItem(props.item)
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-icon",
-                                                    {
-                                                      attrs: {
-                                                        color: "pink darken-2"
-                                                      }
-                                                    },
-                                                    [_vm._v("delete")]
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-btn",
-                                                {
-                                                  staticClass: "mx-0",
-                                                  attrs: { icon: "" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      _vm.ClientShow(props.item)
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-icon",
-                                                    {
-                                                      attrs: {
-                                                        color: "blue darken-2"
-                                                      }
-                                                    },
-                                                    [_vm._v("visibility")]
-                                                  )
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      key: "pageText",
-                                      fn: function(ref) {
-                                        var pageStart = ref.pageStart
-                                        var pageStop = ref.pageStop
-                                        return [
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllActiveLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
                                           _vm._v(
-                                            "\n  From " +
-                                              _vm._s(pageStart) +
-                                              " to " +
-                                              _vm._s(pageStop) +
-                                              "\n"
+                                            _vm._s(props.item.interest_rate)
                                           )
                                         ]
-                                      }
-                                    }
-                                  ])
-                                },
-                                [
-                                  _c(
-                                    "v-alert",
-                                    {
-                                      attrs: {
-                                        slot: "no-results",
-                                        value: true,
-                                        color: "error",
-                                        icon: "warning"
-                                      },
-                                      slot: "no-results"
-                                    },
-                                    [
-                                      _vm._v(
-                                        '\n  Your search for "' +
-                                          _vm._s(_vm.search) +
-                                          '" found no results.\n'
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
                                       )
                                     ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
                                   )
-                                ],
-                                1
+                                ]
                               )
                             ],
                             1
                           )
-                        ])
-                      ]
-                    )
-                  ]
-                )
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ],
-      1
-    )
-  ])
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -89190,7 +89345,1559 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-62af83e8", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0287a96a", module.exports)
+  }
+}
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(145)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(147)
+/* template */
+var __vue_template__ = __webpack_require__(148)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-002c7570"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\loan\\DefaultedLoans.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-002c7570", Component.options)
+  } else {
+    hotAPI.reload("data-v-002c7570", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(146);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("42ef2ce6", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002c7570\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DefaultedLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002c7570\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DefaultedLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-002c7570]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-002c7570]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllDefaultedLoans: []
+      };
+   },
+
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
+
+      axios.post('getDefaultedLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllDefaultedLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
+});
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllDefaultedLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.interest_rate)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
+                                      )
+                                    ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-002c7570", module.exports)
+  }
+}
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(150)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(152)
+/* template */
+var __vue_template__ = __webpack_require__(153)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-1a1131e7"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\loan\\DraftLoans.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1a1131e7", Component.options)
+  } else {
+    hotAPI.reload("data-v-1a1131e7", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(151);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("448202d5", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1a1131e7\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DraftLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1a1131e7\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DraftLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-1a1131e7]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-1a1131e7]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 152 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllDraftLoans: []
+      };
+   },
+
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
+
+      axios.post('getDraftLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllDraftLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
+});
+
+/***/ }),
+/* 153 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllDraftLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.interest_rate)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
+                                      )
+                                    ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1a1131e7", module.exports)
+  }
+}
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(155)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(157)
+/* template */
+var __vue_template__ = __webpack_require__(158)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-471cf4b0"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\loan\\RejectedLoans.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-471cf4b0", Component.options)
+  } else {
+    hotAPI.reload("data-v-471cf4b0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(156);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("93d160a8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-471cf4b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./RejectedLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-471cf4b0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./RejectedLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-471cf4b0]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-471cf4b0]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 157 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllRejectedLoans: []
+      };
+   },
+
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
+
+      axios.post('getRejectedLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllRejectedLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
+});
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllRejectedLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.interest_rate)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
+                                      )
+                                    ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-471cf4b0", module.exports)
+  }
+}
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(160)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(162)
+/* template */
+var __vue_template__ = __webpack_require__(163)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-bb0548e2"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\loan\\RepaidLoans.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-bb0548e2", Component.options)
+  } else {
+    hotAPI.reload("data-v-bb0548e2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(161);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("f2d986f6", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bb0548e2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./RepaidLoans.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bb0548e2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./RepaidLoans.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#table[data-v-bb0548e2]{\r\n   margin-top: -100px;\n}\n.v-content__wrap[data-v-bb0548e2]{\r\n   margin-left: -150px;\r\n   width: 1000px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 162 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user'],
+   data: function data() {
+      return {
+         AllReferres: [],
+         headers: [{ text: 'Loan Id', align: 'left', value: 'loan_id' }, { text: 'Loan Type', value: 'loan_type' }, { text: 'Amount', value: 'amount' }, { text: 'Interest Rate', value: 'interest_rate' }, { text: 'Application Date', value: 'application_date' }, { text: 'Status', value: 'status' }],
+         search: '',
+         AllRepaidLoans: []
+      };
+   },
+
+   methods: {
+      close: function close() {
+         this.dispAdd = this.dispClient = this.pdialog2 = false;
+      }
+   },
+   mounted: function mounted() {
+      var _this = this;
+
+      axios.post('getRepayedLoans').then(function (response) {
+         _this.loader = false;
+         _this.AllRepaidLoans = response.data;
+      }).catch(function (error) {
+         _this.errors = error.response.data.errors;
+      });
+   }
+});
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { "justify-center": "", "align-center": "" } },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", [
+                      _c(
+                        "div",
+                        { attrs: { id: "table" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.AllRepaidLoans,
+                                search: _vm.search,
+                                counter: ""
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(props.item.loan_id) +
+                                            "\n             "
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.loan_type))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.amount))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.interest_rate)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.repayment_period)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(props.item.application_date)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.status))]
+                                      )
+                                    ]
+                                  }
+                                },
+                                {
+                                  key: "pageText",
+                                  fn: function(ref) {
+                                    var pageStart = ref.pageStart
+                                    var pageStop = ref.pageStop
+                                    return [
+                                      _vm._v(
+                                        "\n       From " +
+                                          _vm._s(pageStart) +
+                                          " to " +
+                                          _vm._s(pageStop) +
+                                          "\n    "
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\n       Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\n    '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-bb0548e2", module.exports)
   }
 }
 

@@ -63,6 +63,7 @@ class LoanController extends Controller {
 		$loan->loan_id = 'Loan_' . $request->loan_id;
 		$loan->amount = $request->amount;
 		$loan->interest_rate = $request->interest_rate;
+		$loan->status = 'Applied';
 		$loan->save();
 		return $loan;
 	}
@@ -73,5 +74,25 @@ class LoanController extends Controller {
 
 	public function getLoans() {
 		return Loan::all();
+	}
+
+	public function getAppliedLoans() {
+		return Loan::where('status', 'Applied')->get();
+	}
+
+	public function getDefaultedLoans() {
+		return Loan::where('status', 'Defaulted')->get();
+	}
+
+	public function getRepayedLoans() {
+		return Loan::where('status', 'Repaid')->get();
+	}
+
+	public function getDraftLoans() {
+		return Loan::where('status', 'Draft')->get();
+	}
+
+	public function getRejectedLoans() {
+		return Loan::where('status', 'Rejected')->get();
 	}
 }

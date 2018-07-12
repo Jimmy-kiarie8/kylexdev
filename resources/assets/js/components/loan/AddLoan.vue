@@ -33,15 +33,15 @@
                       <v-form ref="form" @submit.prevent>
                         <v-container grid-list-xl fluid>
                           <v-layout wrap>
-                            <!-- <div class="form-group col-md-6">
+                            <div class="form-group col-md-6">
                               <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
                               <div class="col-md-12">
                                   <select class="custom-select" v-model="form.id">
-                                    <option v-for="client in clients" data-subtext="" :value="client.id">{{client.name}}</option>
+                                    <option v-for="client in clientsDetails" data-subtext="" :value="client.id">{{client.name}}</option>
                                   </select>
                               </div>
                             </div>
- -->
+
                             <div class="form-group col-md-6">
                               <label for="password" class="col-md-8 col-form-label text-md-right">Purpose</label>
                               <div class="col-md-12">
@@ -179,7 +179,9 @@
                               ></v-text-field>
                               <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
                             </v-flex>
-                            <div v-for="referee in referees" >
+                          </v-layout>
+                          <v-layout>
+                            <div v-for="referee in referees">
                               <div class="form-group col-md-6">
                                 <label for="password" class="col-md-8 col-form-label text-md-right">Member</label>
                                 <div class="col-md-12">
@@ -188,17 +190,19 @@
                                     </select>
                                 </div>
                               </div>       
-                              <v-flex xs12 sm6>
-                                <v-text-field
-                                v-model="client.name"
-                                :rules="rules.name"
-                                color="blue darken-2"
-                                label="Full name"
-                                disabled
-                                required
-                                ></v-text-field>
-                                <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
-                              </v-flex>    
+                              <div v-for="client in clientsDetails" v-if="client.id === form.id">
+                                <v-flex xs12 sm6>
+                                  <v-text-field
+                                  v-model="client.name"
+                                  :rules="rules.name"
+                                  color="blue darken-2"
+                                  label="Full name"
+                                  disabled
+                                  required
+                                  ></v-text-field>
+                                  <!-- <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small> -->
+                                </v-flex>  
+                              </div>  
                             </div>                 
                           </v-layout>
                           <v-divider></v-divider>

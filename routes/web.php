@@ -44,6 +44,12 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::post('/loans/{id}', 'LoanController@loans')->name('loans');
 	Route::post('/getLoans', 'LoanController@getLoans')->name('getLoans');
 	Route::post('/getReferees', 'LoanController@getReferees')->name('getReferees');
+	Route::post('/getAppliedLoans', 'LoanController@getAppliedLoans')->name('getAppliedLoans');
+	Route::post('/getDefaultedLoans', 'LoanController@getDefaultedLoans')->name('getDefaultedLoans');
+	Route::post('/getRejectedLoans', 'LoanController@getRejectedLoans')->name('getRejectedLoans');
+	Route::post('/getRepayedLoans', 'LoanController@getRepayedLoans')->name('getRepayedLoans');
+	Route::post('/getDraftLoans', 'LoanController@getDraftLoans')->name('getDraftLoans');
+	Route::post('/getRepayedLoans', 'LoanController@getRepayedLoans')->name('getRepayedLoans');
 
 	Route::post('/getUsers', 'UserController@getUsers')->name('getUsers');
 	// Route::post('/profile/{id}', 'UserController@profile')->name('profile');
